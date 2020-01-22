@@ -1,0 +1,220 @@
+
+NIST : 
+
+Linux
+1 vcpu		--> 128 cpu
+1 ram		--> 4 TB RAM
+8 gb hdd	--> 16 TB HDD
+
+_______________________________________
+Traditional / On-premise : Quotation / 3-4 weeks / 100% upfront PO / O/s --> UAT --> Prod
+
+3 Months
+
+Server rack
+Network rack
+cooling
+physical security
+network
+
+
+Analysis : 
+
+
+Tenancy : 
+
+Dedicated : H/w dedicatedly available to one customer
+Shared : Multiple customers uses the same hardware.
+___________________
+
+EC2 : Run the Servers
+RDS : Databases
+VPC : Network
+
+
+12 MOnths Free tier
+
+Free Tier : 
+
+S3 : 5 gb / month
+
+0 bytes
+
+Unlimited
+
+ec2 : 750 hrs/ month t2.micro
+
+RDS : 750 hrs/month db.t2.micro
+
+
+Java 
+.net
+Technical support
+Storage admin
+Freshers
+Middleware admin
+DW 
+
+
+AWS : Infrastructure Provider :  .net/java/php/puthon/perl/ruby... 
+
+AWS Developer : AWS + java/python/perl/go ... 
+
+AWS Engineer / SysOps Administrator / Cloud Admin: 
+
+storage admin : s3
+network admin : VPC
+DBA : RDS/Dynamodb
+DW : Redshift
+Server : ec2
+
+AWS SA : Propose solutions
+
+AWS Security Engineer : Security / Audits 
+Bigdata / IoT / Ml/ai : 
+
+Support roles : Tech support 
+
+DevOps : Infra management tools : Jenkins/git/chef/puppet/ansible/maven... 
+
+Prog: Not required
+Linux : Yes.. / Register online.. No cost
+DevOps : Free course (jenkins/git/maven)
+
+___________________________________________________________________________
+
+Deployement Models :
+
+--> Public Cloud : Open for all/ AWS,Azure,GCP....  Maintenance : Service Provider
+
+--> Private Cloud : Infra will be available to One Organisation..  Main: You / 3rd Party
+			Designed and operated by your own Org / 3rd party..
+
+--> Hybrid CLoud : One or more Cloud combinations.. Public + Public.. Public + Private..
+
+web servers Cloud , Database Servers On-Prem (Credit card).. 
+
+--> Community Cloud : Group of Organisation.. Infra and Group will use.. 
+
+____________________________________________________________________________
+
+
+Service Models : 
+
+
+Traditional / On-Premise : 
+
+
+
+Application		--> SA
+Data			
+Runtime			--> Application Admins		
+Middleware		--> 
+Operating Systems	--> System Admins
+Virtualisation		--> Vmware/Hyper-v/xen/KVM
+Servers			--> System Engineers / Syntel Admin
+Database		--> DBA
+Storage			--> SAN/NAS/Obj Admin
+Network			--> Network Admins
+
+
+ISP
+Location
+Cooling
+Security
+
+
+
+SaaS : Software as a Service : Lightsail
+PaaS : Platform as a Service : ElasticBenastalk
+IaaS : Infrastructure as a Service : Ec2
+
+Requirement : A Website, Which is accesable to everyone..  
+
+
+
+
+AWS = Instance = Server
+Azure = Azure VM = Server
+GCP = Engine = Server
+On-Prem = Box 
+
+
+WAF : 
+Cloudfront : DDoS 
+Geolocation Restrictions : 
+AWS Shield : 
+AWS Firewall Manager : 
+
+
+
+User Management		: IAM
+Storage Management	: S3
+COmpute (HA/Scaling)	: EC2
+Hosting			: R53
+Databases		: RDS
+Network			: VPC
+Application Service	: 
+Security Service	: WAF, Cloudfront
+Migration Services 
+
+AWS : Amazon Web Services : 
+
+13 Years : March 2006 : AWS CEO Andy Jessy : 
+
+AWS Re:Invent : AWS Annual Conference
+
+Chris Pinkman and Benjamin Black : SQS (Simple Queue Service) : Decoupled application : Developed Whitepapers : Selling SQS as a Service 
+
+
+AWS : Azure : GCP 
+
+
+AWS Global Infrastructure : 
+___________________________
+
+Regions : Geographical location / Physical location : 22 Regions : No Resources
+
+Mumbai : ap-south-1
+N Virginia : us-east-1
+Sydney : 
+
+18 Regions : General Public
+2 : US Gov Cloud : You need to Signup for USGov : FIPPS, FedRAMP, PCI DSS..  
+2 : China : amazonaws.cn : Request for an Account : Nixia & Bejing : 
+Availability Zone : Data Centre or combination of Multiple DCs : 69 AZs.. 
+
+Every region contains Min of 3 AZs... 
+
+Mumbai : 3 Azs: ap-south-1a, ap-south-1b, ap-south-1c
+N V : 6 AZs : us-east-1a, us-east-1b --- us-east-1f
+
+
+PoP / Edge Locations : CDN (Content Delivery Network) Endpoints : Cached Locations : CloudFront : 100+ Edge locations 
+
+Mumbai : New Delhi, Hyderabad, Chennai, Bangalore
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
