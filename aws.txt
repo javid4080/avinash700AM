@@ -177,7 +177,7 @@ Regions : Geographical location / Physical location : 22 Regions : No Resources
 
 Mumbai : ap-south-1
 N Virginia : us-east-1
-Sydney : 
+
 
 18 Regions : General Public
 2 : US Gov Cloud : You need to Signup for USGov : FIPPS, FedRAMP, PCI DSS..  
@@ -193,6 +193,78 @@ N V : 6 AZs : us-east-1a, us-east-1b --- us-east-1f
 PoP / Edge Locations : CDN (Content Delivery Network) Endpoints : Cached Locations : CloudFront : 100+ Edge locations 
 
 Mumbai : New Delhi, Hyderabad, Chennai, Bangalore
+
+__________________________________________________________________________________
+
+1/23/2020
+
+Step 1 : 
+https://aws.amazon.com/free
+
+Email Address : root					
+Password and Confirm password : Strong Password
+Account Name : 
+
+Step 2 : 
+Contact Information
+--> Personal Account					 
+--> Professional / Company Account
+Address
+
+
+Step 3 :
+Payment Information
+
+--> Visa / Master Card / AMEX (CC/DC)			
+--> 2 INR / 1 $ (Refunds back with in 72 Hrs)
+
+Step 4 :
+Verify your Identity
+
+--> Email / Phone Number
+--> ENter capcha and Phone Number
+--> Answer the IVR call, and Enter the 4 Digit pin generated on your screen.
+
+Step 5 :
+Choose the support plan   : Getting assistance from AWS
+
+1. Account and Billing Related		: Free for All support plans.. 24x7 Support.. 
+2. Service Limit increase 		: Free for All support plans.. 24x7 Support..
+
+ec2 : Servers : 20 running servers 
+VPC : Networks : 5 VPCs
+SES : 200 EMails/Day
+S3 : 100 buckets : 
+
+3. Technical Assistance			: Depends on the support plan we choose.. 
+
+Basic Support : 1, 2 Free.. 24x7 Support.. 3: Not available.. Pricing : Free
+Trusted Advisor checks : 7 Core area checks..
+
+Developer: 3: 12-24 Local business hours. One user can raise a ticket.. Price : 29$/M
+Trusted Advisor checks : 7 Core area checks..
+
+Business : 3: 1 Hour.. Any user can raise ticket.. Price : 100$/M
+Trusted Advisor checks : all checks..
+
+Enterprise : 3: 15 Min.. Any user can raise ticket.. Dedicated TAM (Technical Account Manager).. AWS Sr SA.. AWS Concierge.. training.. AWS Shield Advanced.. Price: 15k$/Month
+Trusted Advisor checks : all checks..
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
