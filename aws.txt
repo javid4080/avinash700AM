@@ -251,6 +251,68 @@ Enterprise : 3: 15 Min.. Any user can raise ticket.. Dedicated TAM (Technical Ac
 Trusted Advisor checks : all checks..
 
 
+_________________________________________________________________________________________
+
+Email Id & 10 digit password.. 
+
+--> Enable MFA for root user.
+
+--> Hardware MFA Device : 
+--> VIrtual MFA Device : We can use our smartphone : Google Authenticator, Authy 2 factor
+--> U2B key : 
+
+
+--> IAM Users will not get any access to billing dashboard.
+
+
+IAM : Identity and Access Management : We can manage users and their level of access on our AWS Account. 
+
+root Email and Password : 
+
+Manager : Full Access including payments : root 
+TL : Administrator Access excluding payments :  
+Storage Admin : S3 : S3FullAccess : 
+System Engineer : EC2 : EC2FullAccess : 
+
+Polocies : Document contains set of permissions on our AWS Accounts, Written in JSON format.
+
+
+IAM User Creation :
+
+1. Set user details i.e; Username
+
+2. Choose your Access Type
+
+--> AWS Management Console Access : GUI : Browser : UN, Pwd and Sign-In URL
+--> Programatic Access : CLI : sdk, api, 3rd party app integrations : AccessKeyID and                                                                       SecretAccessKey
+3. Set Permissions
+
+Manage using Groups	: S3AdminGroups --> Add this user to group
+Copy Existing users permissions
+Attach polocy directly to user
+
+
+Task : Create your AWS Account. 
+
+Task 1 : ENable MFA on your root account. 
+
+Task 2 : Create an IAM user with S3FullAccess and Test his level of access on account.
+
+Task 3 : Create an IAM User with "AdministratorAccess" and verify his access on account including Billing dashboard.
+
+Task 4 : Provide Billing access to task 3 IAM User. (use same user for all future sessions) 
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
