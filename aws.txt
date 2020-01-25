@@ -274,7 +274,7 @@ TL : Administrator Access excluding payments :
 Storage Admin : S3 : S3FullAccess : 
 System Engineer : EC2 : EC2FullAccess : 
 
-Polocies : Document contains set of permissions on our AWS Accounts, Written in JSON format.
+Policies : Document contains set of permissions on our AWS Accounts, Written in JSON format.
 
 
 IAM User Creation :
@@ -303,23 +303,43 @@ Task 3 : Create an IAM User with "AdministratorAccess" and verify his access on 
 Task 4 : Provide Billing access to task 3 IAM User. (use same user for all future sessions) 
 
 
+_______________________________________________________________________________________
+
+D: 1/25/2020
+
+AWS Managed Policies : ec2fullaccess
+Job Function Policies : DBA
+Customer Mangaed Policies : 
+
+
+AdministratorAccess : Provides full access to AWS services and resources.
+PowerUserAccess : Provides full access to AWS services and resources, but does not allow management of Users and groups.
+ReadOnlyAccess : Provides read-only access to AWS services and resources.
+AWSDenyAll : Deny all access
+
+
+User 1 : ec2 + s3  : Implicit Allow
+
+User 2 : AdministratorAccess  + DenyS3 : 
+
+	Group : AdminAccess
+User3 : AdminGroup + AdministratorAccess + S3FullAccess + s3Deny  
+
+
+Credentials Report : 
+
+CloudTrail : logging service on our AWS Account. It logs all users activities. 
+
+--> IAM does not require region selection. IAM is a Global resource, These resources are available in all the Regions.
 
 
 
+Task : Create an IAM User with AdministratorAccess, and Add S3Deny and verify his level of access on s3 platform and other services.
+
+Task 2 : Add Task1 user to multiple groups, and use the policysimulator to understand the policy esclations.
 
 
-
-
-
-
-
-
-
-
-
-
-
-
+Task 3 : Create a user with "AdministratorAccess", Enable billing access for this user, and use same user throughout our course. 
 
 
 
