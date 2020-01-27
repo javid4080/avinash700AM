@@ -1,0 +1,85 @@
+S3 : Simple Storage Service : 
+
+--> Object based Storage : store the flat file : 
+
+Block based Storage : Install the OS : EBS, Instance Store
+Network attached storage : Storage over the network : EFS , FSx
+
+
+--> Unlimited storage available
+--> S3 is a global platform, DOesn't required any region selection.
+--> Softlimit : 100 buckets
+--> Buckets : Dir/Folder
+--> We store all the objects in S3 buckets.
+--> We need to choose a region when creating a bucket.
+--> Min Obj Size : 0 bytes, Max Obj size : 5 TB
+Bucket name : Must be unique across the globe. (should comply with DNS naming standards)
+--> Min CHar : 3, Max Char: 63
+--> Should not contains any Uppercase letter/ 
+--> should not resemble IP address format
+--> Should not start with . , should not end with . , No adjesent ..
+
+--> Pay-as-you-go
+--> No Pre-provisioning required
+
+100 gb data
+
+10gb Frequently accessed, Data should be available immediately
+10gb lessFreq Accesed data, Data should be available immediately
+20gb Non-Mission critical data, reprodusable data.. 
+20gb Archieve, not required immediately
+
+S3-Standard : Frequently accessed, Default storage on s3 platform. 
+99.99% Avia, 99.999999999% Durability
+
+Standard-IA / OneZone-IA : lessFreq Accesed data, Data should be available immediately
+
+GLacier / Glacier Deep Archieve : To archieve data for lobger durations.. Data will not be available immediately.. We need to retive the data to access.
+
+RRS : Reduced Redundancy Storage : Durability : 99.99%, Nonmission critical data, easily reprodusable data.. 
+
+Intelligent tier : We can choose if we are not sure about our access patterns.
+
+
+https://s3.region.amazonaws.com/bucketname/objectname
+
+
+Free Tier : 
+
+--> 5 gb S3 Standard storage
+--> 2000 PUT Requests and 20,000 GET requests
+--> Data transfer within region is free.. 
+
+
+Versioning : 
+____________
+
+--> Backup option on our s3 bucket.
+--> Once enabled, cannot disable, We can suspend if required.
+--> If we delete Latest version (Version : Hide), We will get the Delete marker, 
+--> Delete the "Delete marker" to get the Latest version back.
+--> Set "version : Show" , delete any of the object version. We will not get Delete Marker.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
