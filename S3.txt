@@ -1,6 +1,6 @@
 S3 : Simple Storage Service : 
 
---> Object based Storage : store the flat file : 
+--> Object based Storage : store the flat file : mp3,mp4,video,images... 
 
 Block based Storage : Install the OS : EBS, Instance Store
 Network attached storage : Storage over the network : EFS , FSx
@@ -43,6 +43,10 @@ Intelligent tier : We can choose if we are not sure about our access patterns.
 
 https://s3.region.amazonaws.com/bucketname/objectname
 
+VirtualPath:
+https://bucketname.s3.ap-south-1.amazonaws.com/objectname
+https://bucketname.s3.amazonaws.com/objectname
+
 
 Free Tier : 
 
@@ -59,6 +63,47 @@ ____________
 --> If we delete Latest version (Version : Hide), We will get the Delete marker, 
 --> Delete the "Delete marker" to get the Latest version back.
 --> Set "version : Show" , delete any of the object version. We will not get Delete Marker.
+
+D: 1/28/2020
+
+PHD : Personal Health Dashboard
+
+
+CRR and SRR : (Practice with same region bucket)
+____________
+
+--> Same Region replication is newly introduced feature. Please correct this in material.
+--> Versioning must be enabled on source bucket and destination bucket.
+
+LCR :
+_____
+--> Refer to the diagram
+
+Static website hosting
+______________________
+
+--> Your Domain = Bucket name
+
+http://bucketname.s3-website.region.amazonaws.com
+
+2XX : Success
+3XX : Redirection error
+4XX : Client Side error
+5XX : Server Side error
+
+_____________________
+
+Object Lock:
+--> Versioning must be enabled.
+
+Governance mode can be disabled by AWS accounts that have specific IAM permissions.
+Compliance mode cannot be disabled by any user, including the root account.
+
+
+
+
+
+
 
 
 
