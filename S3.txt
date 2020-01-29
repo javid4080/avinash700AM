@@ -95,25 +95,67 @@ _____________________
 
 Object Lock:
 --> Versioning must be enabled.
+--> We can enable this feature while creating the bucket only. (If you want to enable for an existing bucket, we need to contact AWS support). 
 
 Governance mode can be disabled by AWS accounts that have specific IAM permissions.
 Compliance mode cannot be disabled by any user, including the root account.
 
 
+_____________________
+
+Server access log : Enable logs on s3 bucket.
+
+Tags: COmbination of Key and Value pairs. We can give our own metadata by using tags.
+
+______________________________________________________________________________________
+
+D: 1/29/2020
+
+Encryption : 
+
+--> In-Transit Encryption
+	--> SSL / TLS 
+
+--> Server Side Encryption (At Rest Encryption)
+	--> SSE - S3 (Free Tier)
+	--> SSE - KMS (Key Managent Service)  	(No Freetier)
+	--> SSE - C (Customer Managed)		(No Freetier)  (External)
+
+--> Client Side encryption
+
+	--> Encrypting data in local environment, before uploading to s3 bucket.
+	--> AWS SDK Tools to perform CSE
+
+
+KMS : Select Symmentric/Assymentric --> KMS / External /HSM --> KMS --> Key Administrator 	--> Key Usage Permissions --> Review and Create
+
+
+________________________________________________________________________________________
+
+
+Transfer Acceleration : ENable to use Edgelocations to perform data transfers to our s3 buckets. 
+--> No Free tier
+--> Compare the speed before enable this feature.
+
+__________
+
+Events: 
+
+--> SNS (Simple Notification Service)	--> 
+--> SQS (Simple Queue Service)
+--> Lambda
+
+
+Application Integration  --> SNS --> 
 
 
 
+Task: 
+User1, Need access only on bucket1. If user1 trying to access any other buckets he should end up with an error.
 
+Task2: Configure events on s3 bucket.
 
-
-
-
-
-
-
-
-
-
+Task3: Read S3 storage comparison chart and FAQs on s3.
 
 
 
