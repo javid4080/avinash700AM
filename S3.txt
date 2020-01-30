@@ -151,11 +151,100 @@ Application Integration  --> SNS -->
 
 
 Task: 
-User1, Need access only on bucket1. If user1 trying to access any other buckets he should end up with an error.
+User1, Need access only one bucket1. If user1 trying to access any other buckets he should end up with an error.
 
 Task2: Configure events on s3 bucket.
 
 Task3: Read S3 storage comparison chart and FAQs on s3.
+
+
+______________________________________________________________________________________
+
+D: 1/30/2020
+
+Bulk retrieval : Typically within 5-12 hours
+
+Standard retrieval : Typically within 3 - 5 hours
+
+Expedited retrieval : Typically within 1 - 5 minutes when retrieving less than 250MB
+
+___________________
+
+
+3500 Write/Sec
+5,500 Read/Sec
+
+--> Design a valid/unique prefix for your s3 data to get optimised performance.
+
+_________________
+
+
+IMPORT/EXPORT: 
+
+
+Snowball : 50/80 TB, 200$/Job, 10 Days free, 15$/Day.. 
+Snowball Edge : 100 TB, Rackmountable, 250$/Job, 10 Days free, 20$/Day.. 
+Snowmobile : PB scale container.. 
+
+
+By using, Client Manifest file and unlock code, we can unlock this device.
+Configure a local network IP address. 
+Install Snowball/edge client and transfer all the data.
+
+
+AWS Direct Connect : Dedicated connectivity between our On-Premise and AWS environments. 
+
+
+_________________________________________________________________________________________
+
+
+Managing s3 with 3rd party applications: 
+
+--> S3Browser
+--> Cloudberry explorer for s3
+--> cyberduck
+--> WinSCP 
+
+
+Task: Explore with S3Browser
+Task: User1, Need access only one bucket1. If user1 trying to access any other buckets he should end up with an error.
+
+user 1 --> user1bucket	--> Give a specific URL to user 1 to access his own bucket
+user 2 --> user2bucket
+
+
+_____________________________________________________________________________________
+
+
+EC2 : Elastic Compute Cloud : 
+
+	Elastic	CPU		Cloud
+		Storage
+		Memory
+		Applications/software
+		Network
+		GPU
+
+
+Traditional Scenario : Server to test your application : 
+
+Application : 	100 customers --> 1M customers (We will look for 1M cus Configuration)
+
+--> 100% upfront		ROI 
+
+EC2: 100 Cus : t2.medium --> t3.4xlarge -----> Servers+ELB --> 100s servers --> 10 sers
+
+
+Scaling :
+Vertical Scaling : 
+Horizontal scaling : 
+
+
+
+
+
+
+
 
 
 
