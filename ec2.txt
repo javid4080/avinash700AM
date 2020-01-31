@@ -1,0 +1,124 @@
+EC2 : Elastic Compute Cloud : 
+
+	Elastic	CPU		Cloud
+		Storage
+		Memory
+		Applications/software
+		Network
+		GPU
+
+
+Traditional Scenario : Server to test your application : 
+
+Application : 	100 customers --> 1M customers (We will look for 1M cus Configuration)
+
+--> 100% upfront		ROI 
+
+EC2: 100 Cus : t2.medium --> t3.4xlarge -----> Servers+ELB --> 100s servers --> 10 sers
+
+
+Scaling :
+Vertical Scaling : 
+Horizontal scaling : 
+
+Instance = Server
+
+
+On-Demand ec2 instance : no specific workloads / usecases, If you want to test your application in AWS.. First time usage on aws.. 
+
+Pricing : /hr and /sec (With min of 10 sec)
+
+
+Reserved Instances (RI) : Predictable workloads, stable workloads, long term runs on aws..  Duration : 1 Year / 3 Years.. 
+
+Standard RI : We cannot upgrade the selected configuration within the duration. 
+Convertable RI : We can change/upgrade the configuration. 
+Scheduled RI : repeated/scheduled intervals, we can run our ec2 instance.
+
+Pricing : Full Upfront : Pay everything while purchasing instance. 
+	  Partial Upfront : pay 30-50% while purchasing, remaining amount pay monthly 			    basis (but with reduced hourly price)
+	  No Upfront : No need to pay anything, but most of the times cost same as on-			demand instances.
+
+AWS Marketplace : We can register as a seller and sell our products/applications/instances.
+
+
+Spot Instance: When we have flexible start/stop options for our instances.. If you need high configuration servers ar lowest cost for specific durations.. 
+
+--> We need to bid our ouwn price against aws pricing. If bid price is same/greater than as aws pricing we will get an ec2 instance. 
+ 
+--> Pricing history
+
+--> We can create a fleet requets.
+
+3 hr 35 Min 20 Sec --> Price increased and AWS Terminated your isnatccne : 3 Hrs.. 
+3 hr 35 Min 20 Sec --> Price not increased and you Terminated inatccne : full duration 
+								3 hr 35 Min 20 Sec
+
+
+Step 1 : Choose an AMI (Amazon Machene Image) : Choose your required OS. 
+
+An AMI is a template that contains the software configuration (operating system, application server, and applications) required to launch your instance.
+
+
+Step 2 : Step 2: Choose an Instance Type
+t2.micro (1vCPU, 1 RAM) 
+
+General Purpose : t2, t3, a1, m4, m5, m5d
+Compute optimised : c4, c5, c5d
+GPU : P, G
+Memory optimised: r4, r5, r5d, x1e, z1
+Storage optimised: d2, i2, i3
+
+
+Step 3: Additional configurations
+
+Shutdown behavior : STOP
+Enable termination protection : YES
+
+
+Step 4: Add Storage
+Root : 30 gb
+
+Step 5 : Add tags
+
+We can define max of 50 tags/ instance.
+
+Step 6: COnfiguyre the Security group.
+
+Security group: Firewall at our instance level. 
+
+Windows : RDP : Remote Desktop Protocol : 3389	: Remote desktop connection
+Linux : SSH : Secure shell : 22			: putty / mutty/ moxterm
+web : http : 80					: browser
+web : https : 443				: browser
+Db : Mysql : 3306				: mysql workbench
+DB : mssql : 1433				: ssms SQL server management studio
+
+Source : 0.0.0.0/0  (Anywhere)
+
+Open Run --> mstsc --> enter
+
+Step 7: Create a new Keypair and get connected to your ec2 instance.
+
+
+
+Task : Launch a Windows ec2 instance with a keypair. Get connected to instance with the password. 
+
+Change the password at OS level, and signout.. Login back to your ec2 instance using Keypair generated password.. try to login with newly setup password.
+
+
+Task 2: Create a user in Windows server and provide him "Local Admin Rights" and "Remote connection permissions" .
+
+Connect to your ec2 instance as newly created user.
+
+
+
+
+
+
+
+
+
+
+
+
