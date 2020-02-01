@@ -111,9 +111,36 @@ Task 2: Create a user in Windows server and provide him "Local Admin Rights" and
 
 Connect to your ec2 instance as newly created user.
 
+________________________________________________________________________________________
+D:2/1/2020
+
+Security Groups : 
+
+Security groups are stateful. We always need to takes care about inbound rules.
+By default, all traffic is allowed in outbound rules.
+
+
+Inbound : Traffic delivering from ec2 instance.
+Outbound : Traffic into your ec2 instance. 
+
+
+EIP : Elastic IP Address : NO FREE TIER ELIGINILITY : Dedicated IP allocated to pour aws environment. We can associate this IP to any resource running in same region.
+
+ENI : Elastic Network Interface : We can create an associate multiple NICs to an ec2 instance. But Instance and NIC should be in Same AZ (Availability Zone).
+
+
+System Status Checks : These checks monitor the AWS systems required to use this instance and ensure they are functioning properly.
+
+Instance Status check : These checks monitor your software and network configuration for this instance.
 
 
 
+Task : Open required ports to ping your ec2 instance. 
+Task 2: Install IIS and deliver your website using public ip your ec2 instance. 
+
+Task 3 : Associate multiple ENI to an ec2 instance..  Launch a new ec2 instance, and try to access task 2 outputs using Both the private IP addresses.
+
+Task 4 : Limit the Task 3 output to only newly launched ec2 instance public Ip address using security groups.
 
 
 
