@@ -142,6 +142,78 @@ Task 3 : Associate multiple ENI to an ec2 instance..  Launch a new ec2 instance,
 
 Task 4 : Limit the Task 3 output to only newly launched ec2 instance public Ip address using security groups.
 
+________________________________________________________________________________________
+
+D: 2/3/2020
+
+
+Root Device Types : Storage options for our ec2 instances. 
+--> Instance Store Volumes
+--> EBS VOlumes (Elastic Block Storage)
+
+Instance Store Volumes : Also called as Ephemeral Storages. 
+--> THese will not support STOP/START options. 
+--> If underlying failure happens, We will loss all the data.
+--> We can reboot, if required. We don't loss any data for reboot. 
+--> We have only specific instance types to run Instance store volumes. 
+--> 3rd party tools to move Instance store data to EBS volumes Ex: NetApp... 
+
+EBS Volumes : 
+--> 99.999 % Availability
+--> 0.01 - 0.02 Annual Failure value.
+
+SSD : gp2, io1
+HDD : st1, sc1
+Magnetic : Magnetic / standard
+
+root volume (runs OS c:/ or /) : gp2, io1 and magnetic
+Additional volumes : st1, sc1 along with root volumes.. 
+
+We measure storage performance using IOPS (Input and Output operations Per Second)
+
+General Purpose SSD (gp2) : Min 1 GB, Max 16 TB.. Max IOPS : 16,000 only.. 
+			1 GB = 3 IOPS , with min of 100... 3000 Burstanble IOPS count..
+			Root volumes, Stable/regular workloads, small databases.. 
+
+
+Provisioned IOPS SSD (io1) : Min 4 GB, Max 16 TB.. Max IOPS : 64000 only(Only Nitro).. 
+	Default IOPS ratio : 1 GB = 50 IOPS.. We can specify required IOPS count.. 
+	NOSQL databases, Production databases, If we need spcific iops count.. 
+
+
+Magnetic (standard) : Min 1 GB, Max 1 TB.. IOPS N/A.. Less Freq accessed data, Chepest storage.. 
+
+Throughput Optimised HDD (st1):  Min 500 GB, Max 16 TB.. IOPS N/A (500 IOPS), Big data, data warehouses, log processing
+
+COld HDD (SC1) : Min 500 GB, Max 16 TB.. IOPS N/A (250 IOPS).. Colder data requiring fewer scans per day...  
+
+http://aws.amazon.com/ebs
+
+
+diskmgmt.msc
+
+1 GB Volume --> Create a SS --> Create a volume for another AZ --> Volume in Another AZ 
+1 GB Volume --> Create a SS --> Copy SS to ANother region --> Create a volume in AZ
+1 GB Volume --> Create a SS --> Share it with Another AWS Account user --> Create avolume
+1 GB Volume --> Create a SS --> Make it public --> Whoever knows SS ID, they can create 
+
+Snapshots : 
+--> Backup copies of EBS volumes.
+--> SNapshots stores in S3 platform. (Not your S3 buckets)
+--> Snapshots runs with incremental backup mechanism.
+--> We can automate Snapshot creation using DLM (Data Lifecycle Manager) option. 
+
+
+DLM : Data Lifecycle Manager : We can schedule Instance / volume snapshots automatically.
+Need to define the appropriate TAGS.
+
+
+
+Task : Configure DLM to create a snapshot for every 2 Hours for a 1gb volume. 
+
+Task 2 : Launch multiple instance in multiple AZs.. And perform attach volumes.  
+
+
 
 
 
