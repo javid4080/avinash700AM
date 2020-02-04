@@ -214,6 +214,65 @@ Task : Configure DLM to create a snapshot for every 2 Hours for a 1gb volume.
 Task 2 : Launch multiple instance in multiple AZs.. And perform attach volumes.  
 
 
+______________________________________________________________________________________
+
+D: 2/4/2020
+
+
+Windows EC2 Instance --> IIS / Change the password --> GoldenAMI 
+
+
+Linux EC2 Instance : 
+____________________
+
+Step 1 : Choose an AMI (Amazon2 Linux AMI)
+
+Step 2 : Choose an Instance (t2.micro)
+
+Step 3 : Additional configurations
+
+Step 4 : Choose storage (GP2/Magnetic : 8/10 GB)
+
+Step 5 : Add Tags (Max 50 Tags/Instance)
+
+Step 6 : COnfigure the Security Groups 
+	SSH --> Secure Shell --> Port 22 --> SOurce : 0.0.0.0/0 / MyIP / Custom
+
+Step 7 : create a Keypair. 
+
+	--> Putty : Supports ppk file format (Putty Private Key) : .ppk
+	--> Wondows COmmand : Install OpenSSH --> .PEM File
+	--> GIT : Use Git Terminal --> .PEM file
+	--> MobaXterm / Mutty : .ppk
+
+
+	PUttyGen --> Tool to convert .PEM file to .ppk file.. / We can even create a new 		     /own ppk files
+
+ putty.org
+
+
+WIndows with openssh enable / Linux OS / Mac OS: 
+
+ssh -i Keypair.pem username@publicip
+
+
+_____________________________________________________________________________________
+
+Task 1 : How to recover your Windows AMI ec2 instance, if you change default password and unable to retive the password. 
+(You still have the associated Keypair in you local laptop and AWS)
+
+
+Task 2 : How to recover your Windows AMI ec2 instance, if you change default password and unable to retive the password. 
+(You have deleted the keypair from your local laptop and aws)
+
+
+https://docs.aws.amazon.com/AWSEC2/latest/WindowsGuide/ResettingAdminPassword_EC2Config.html
+
+
+
+
+
+
 
 
 
