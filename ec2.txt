@@ -255,6 +255,8 @@ WIndows with openssh enable / Linux OS / Mac OS:
 
 ssh -i Keypair.pem username@publicip
 
+chmod 400 XXX.Pem
+
 
 _____________________________________________________________________________________
 
@@ -267,6 +269,13 @@ Task 2 : How to recover your Windows AMI ec2 instance, if you change default pas
 
 
 https://docs.aws.amazon.com/AWSEC2/latest/WindowsGuide/ResettingAdminPassword_EC2Config.html
+
+______________________________________________________________________________________
+
+D: 2/5/2020
+
+Puttygen
+Keygen
 
 
 
