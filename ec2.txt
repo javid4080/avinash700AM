@@ -278,6 +278,72 @@ Puttygen
 Keygen
 
 
+_____________________________________________________________________________________
+
+D: 2/6/2020
+
+Meta-Data : 
+
+http://169.254.169.254/latest/meta-data/
+
+ami-id
+ami-launch-index
+ami-manifest-path
+block-device-mapping/
+events/
+hostname
+identity-credentials/
+instance-action
+instance-id
+instance-type
+local-hostname
+local-ipv4
+mac
+metrics/
+network/
+placement/
+profile
+public-hostname
+public-ipv4
+public-keys/
+reservation-id
+security-groups
+services/
+
+
+
+User-Data : BSS : Excutes when instance launched for the first time only. 
+
+http://169.254.169.254/latest/user-data
+
+
+use "runcommand" to execute commands on running ec2 instances. 
+
+#!/bin/bash
+yum update -y
+yum install httpd -y
+service httpd start
+chkconfig httpd on
+echo "<h1>This is a userdata webpage</h1>" > /var/www/html/index.html
+
+
+Cloudwatch: Service to monitor AWS resources..  
+
+EC2 Instance: 
+	--> Basic Monitoring : 5 Minutes Interval 
+	--> Detailed Monitoring / Enhanced Monitoring : 1 Min
+
+Default Metrics : We can monitor  CPU, Network, Disk and Status checks... We cannot monitor Memory utilisation using Default MEtrics.. 
+
+If you want to monitor Memory utilisation of an ec2 instance, we need to enable custom Metrics and configure the CloudWatch Unified Agent in our ec2 instance.. 
+
+Using cloudwatch unified agent we can send our custom Application logs to AWS.. 
+
+
+__
+
+
+/var/log/httpd/access_log
 
 
 
