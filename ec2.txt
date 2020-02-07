@@ -330,8 +330,8 @@ echo "<h1>This is a userdata webpage</h1>" > /var/www/html/index.html
 Cloudwatch: Service to monitor AWS resources..  
 
 EC2 Instance: 
-	--> Basic Monitoring : 5 Minutes Interval 
-	--> Detailed Monitoring / Enhanced Monitoring : 1 Min
+	--> Basic Monitoring : 5 Minutes Interval (Free)
+	--> Detailed Monitoring / Enhanced Monitoring : 1 Min (Cost us)
 
 Default Metrics : We can monitor  CPU, Network, Disk and Status checks... We cannot monitor Memory utilisation using Default MEtrics.. 
 
@@ -340,10 +340,35 @@ If you want to monitor Memory utilisation of an ec2 instance, we need to enable 
 Using cloudwatch unified agent we can send our custom Application logs to AWS.. 
 
 
-__
+______________________________________________________________________________________
+
+D: 02/07/2020
 
 
-/var/log/httpd/access_log
+Cloudwatch Events
+
+ELB : 
+
+--> Classic ELB (Previous Generation): for HTTP, HTTPS, and TCP
+--> Application ELB : http and https 
+--> Network ELB : tcp, UDP, tls
+
+
+Logs on ELB : AccessLogs : Stores logs in S3 buckets
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
