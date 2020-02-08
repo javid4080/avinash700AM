@@ -357,6 +357,33 @@ ELB :
 Logs on ELB : AccessLogs : Stores logs in S3 buckets
 
 
+EFS : Elastic File System : 
+
+--> It supports NFSv4.1
+--> Supports only Linux OS
+--> We can mount this EFS to 10s, 100s and 1000s of ec2 instances also.
+--> It's a centralised location to store files/run applications / clustering.. 
+--> We need to takes care file level permissions, there is no option to mange permissions     at EFS level.
+
+--> We can mount EFS to Same VPC instances.
+--> We can mount EFS to Another (Region) VPC instances (VPC peering must be enabled).
+--> We can mount EFS to On-Prem resources also.
+
+
+Task : COnfigure EFS and mount Filesystem while launching ec2 instance to desired path.
+
+Task 2 : Launch multiple ec2 instances, in multiple AZs.. make it as a webserver and mount EFS to Public DocumentRoot path. 
+	and verify, both instances are deliverying same webpage also modifications.
+	perform Permanent mount.
+
+
+Task 3 : Configure Application ELB and run Task2 instances on top of ELB.
+
+Create a new instance make it as a webserver, Create a New Target Group (8080), and deliver new instance via  a newTG with 8080 port.
+
+Task 4 : Launch and configure an ec2 instance, and create a new TG.. 
+
+configure Weighted Routing on ELB with all the three Target groups.. 
 
 
 
