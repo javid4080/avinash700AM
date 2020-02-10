@@ -376,7 +376,6 @@ Task 2 : Launch multiple ec2 instances, in multiple AZs.. make it as a webserver
 	and verify, both instances are deliverying same webpage also modifications.
 	perform Permanent mount.
 
-
 Task 3 : Configure Application ELB and run Task2 instances on top of ELB.
 
 Create a new instance make it as a webserver, Create a New Target Group (8080), and deliver new instance via  a newTG with 8080 port.
@@ -384,6 +383,71 @@ Create a new instance make it as a webserver, Create a New Target Group (8080), 
 Task 4 : Launch and configure an ec2 instance, and create a new TG.. 
 
 configure Weighted Routing on ELB with all the three Target groups.. 
+
+
+________________________________________________________________________________________
+
+D: 10/2/2020
+
+ASG : Auto Scaling Group : 
+
+--> Scale-IN : Removing
+--> Scale-Out : Adding
+
+
+1. Create a GoldenAMI
+2. Create an ELB
+3. Create an ASG
+   3.1 Create a Launch Config
+   3.2 Create an ASG
+
+
+bees with machine guns
+https://blog.bluemalkin.net/load-testing-on-ec2-using-bees-with-machine-guns/
+
+
+
+Application is running in 3 AZs.. Application always need 6 instances.. If 1 AZ down also, app should not get effected..   Looking for COST effective solution
+
+1. 2 in 1a, 2 in 1b, 2 in 1c  
+2. 3 in 1a, 3 in 1b, 3 in 1c  9 / 6 --> 		--> 
+3. 4 in 1a, 4 in 1b, 4 in 1c  12 / 8 -->		--> 
+4. 3 in 1a, 3 in 1b, 0 in 1c  
+5. 4 in 1a, 2 in 1b, 2 in 1c  
+6. 5 in 1a, 5 in 1b, 5 in 1c  15 / 10 --> 
+7. 5 in 1a, 5 in 1b, 0 in 1c  
+8. 6 in 1a, 6 in 1b, 6 in 1c  18 / 12 --> 
+9. 6 in 1a, 6 in 1b, 0 in 1c  12 / 6 --> 
+
+
+Task : Configure ASG with EFS.. 
+
+Task 2 : Test the Scheduled Scaling on ASG.. 
+
+Task 3 : Read the comparison chart for ELB..
+ 
+https://aws.amazon.com/elasticloadbalancing/
+
+Application
+Presentation
+Session
+Transport
+Network
+DataLink
+Physical
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
