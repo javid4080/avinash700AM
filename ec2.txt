@@ -427,7 +427,6 @@ Task 2 : Test the Scheduled Scaling on ASG..
 Task 3 : Read the comparison chart for ELB..
  
 https://aws.amazon.com/elasticloadbalancing/
-
 Application
 Presentation
 Session
@@ -438,9 +437,33 @@ Physical
 
 
 
+___________________________________________________________________________________
+D: 2/11/2020
+
+http://aws.amazon.com/cli
+
+AWS --version			--> TO verify installed CLI tools version
+aws configure
 
 
+Roles : 
 
+
+Task 1 : Launch an ec2 instance using Programatic Access.  later terminate using cli. 
+
+Task 2 : 
+Create an index.html and upload it to s3 bucket.
+While launching an ec2 instance, make it webserver and get the object from s3 to Document Root path using Userdata. 
+
+Task 3 : Create a task using TaskScheduler to sync data between your s3 bucket and local path.
+
+Task 4 : Perform CrossAccount access using Switch roles feature.
+
+Task 5 : Add S3 plugin to your Lightsail Wordpress website.
+
+
+Lightsail : SaaS : 
+__________
 
 
 
