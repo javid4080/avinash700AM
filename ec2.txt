@@ -451,9 +451,22 @@ Roles :
 
 Task 1 : Launch an ec2 instance using Programatic Access.  later terminate using cli. 
 
+--AMI ID
+--Subnet-id
+--Security-group-ids
+--keypair
+
 Task 2 : 
 Create an index.html and upload it to s3 bucket.
 While launching an ec2 instance, make it webserver and get the object from s3 to Document Root path using Userdata. 
+
+Create a role and associate
+
+#!/bin/bash
+yum install httpd -y
+service httpd start
+chkconfig httpd on
+aws s3 cp s3://bucketname/index.html /var/www/html/ --recursive
 
 Task 3 : Create a task using TaskScheduler to sync data between your s3 bucket and local path.
 
@@ -464,6 +477,60 @@ Task 5 : Add S3 plugin to your Lightsail Wordpress website.
 
 Lightsail : SaaS : 
 __________
+
+________________________________________________________________________________________
+
+D: 2/12/2020
+
+ElasticBeanstalk environment
+
+
+
+Task : Reset the Windows instance local administrator password using RunCommand
+
+Task 2 : Install Putty using runcommand 
+
+Task 3 : Perform windows Critical Updated using RunCommand
+
+Task 4 : Install apache/nginx using runcommand on AmazonLinux
+
+
+TrustedAdvisor : Gives advises.. 
+
+Cost Optimization
+Performance
+Security
+Fault Tolerance
+Service Limits
+
+
+Placement Groups : 
+_________________
+
+https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/placement-groups.html
+
+
+
+
+AWS DNS Service : Route53
+
+--> Domain Name freenom.com
+--> Create a Hosted Zone (0.50$/Month)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
