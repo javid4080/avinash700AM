@@ -91,6 +91,85 @@ Task : Create VPC.
 
 
 
+________________________________________________________________________________________
+D: 18/2/2020
+
+VPC Peering : 
+--> We can enable communication between multiple VPCs by using VPC Peering.
+--> VPC Peering is Non-Transitive.
+--> Same region : VPC 1 --> VPC2
+    Another Region VPC  --> Another Region VPC
+    AWS Account 1 VPC --> AWS Account 2 VPC
+
+
+	Requester VPC			Accepter VPC
+	Mumbai				NV
+VPC ID	vpc-048d13cdd02010458		vpc-02cae565
+CIDR 	192.168.0.0/16			172.31.0.0/16
+Region	ap-south-1			us-east-1
+					12 Digit AWS Account ID
+
+
+Use Gateway Endpoint, to access S3 Data from Private Subnet ec2 instances, without internet connection. 
+
+OPENVPN Deployment : 
+
+BOVPN / Site-to-Site VPN : 
+Step 1 : Create a "CustomerGateway" (Need to give Corporate PublicIP)
+Step 2 : Create VirtualPrivateGateway (AWS Side)
+Step 3 : Using CustomerGateway and VirtualPrivateGateway create a Site-to-siteVPN then download the configuration file and share it with Firewall Dept. 
+
+
+
+VPC Arch Digrams :
+
+--> Lucidcharts
+--> Draw.io
+--> Microsoft Visio
+--> Microsoft Powerpoint
+
+
+Task : Launch an ec2 instance in CustomVPC Private Subnet and make it as a webserver. 
+Create an ELB in CustomVPC public Subnet and Deliver the web[page from CustomVPC Private SUbnet instances.
+
+Task 2 : Apply NACLs to deny traffic to one network. 
+Task 3 ; Enable VPC Flowlogs to an s3 bucket and observe the logs related to blocked requestes/ allowed requests. 
+
+Task 4 : Design the AWS Architectural Digram With 
+--> One Public Subnet
+--> Two Private Subnets
+--> NAT and NACLs
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
