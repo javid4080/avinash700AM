@@ -1,0 +1,42 @@
+Certificate Manager : 
+--> IF we need an SSL for Cloudfront (global), we need to generate ssl in N Virginia.
+--> We can generate in individual regions and we can apply to ELB.
+
+Cloudfront : 
+
+
+
+
+
+Cloudtrail: Enabled defaultly.
+--> Stores last 90 days activities.
+--> If we want to store for unlimited days, store in an s3 bucket.
+
+--> Management events : All regular activities. 
+--> Data events : S3 and lambda events
+--> Insights events : Insights events are records that capture an unusual call volume of write management APIs in your AWS account.
+
+In Org level, We create a different trail for every categery.
+
+Datadog
+Cloudchekr
+Splunk
+
+
+Config : Inventory or change management service on AWS
+
+
+
+
+Task 1: Launch a wordpress website and Deliver the website using ELB, configure SSL using ACM, and deliver the wordpress with https. (Perform application level https redirection using virtual host) 
+https://www.youtube.com/watch?v=93ekvcpzs1o
+
+
+Task 2: Deliver a ELB Website via Cloudfront distribution.  Use the Wordpress template.
+
+
+
+
+
+
+
