@@ -5,9 +5,6 @@ Certificate Manager :
 Cloudfront : 
 
 
-
-
-
 Cloudtrail: Enabled defaultly.
 --> Stores last 90 days activities.
 --> If we want to store for unlimited days, store in an s3 bucket.
@@ -27,12 +24,84 @@ Config : Inventory or change management service on AWS
 
 
 
-
 Task 1: Launch a wordpress website and Deliver the website using ELB, configure SSL using ACM, and deliver the wordpress with https. (Perform application level https redirection using virtual host) 
 https://www.youtube.com/watch?v=93ekvcpzs1o
 
-
 Task 2: Deliver a ELB Website via Cloudfront distribution.  Use the Wordpress template.
+_______________________________________________________________________________________
+D: 22/2/2020
+
+AWS Inspector : Amazon Inspector enables you to analyze the behavior of your AWS resources and helps you identify potential security issues.
+CIS : Sets benchmarks for OS
+
+Directory Services: 
+AD Connector : To Intigrate AWS with On-Prem directotory services.
+--> Workspace (VDI)
+--> Workmail
+--> WorkDocs
+
+
+WAF : Web Application Firewall.. 
+
+--> Application Load Balancer / API Gateway
+--> Cloudfront
+
+Barracuda WAF, Fortigate WAF, F5 network WAF.. 
+
+
+AWS Shield : Designed to protect AWS environment from DDoS attacks.
+
+--> AWS Shield Standard : Free for everyone
+--> AWS Shield Advanced : $3,000/month
+
+
+Application Services : 
+______________________
+SNS : Simple Notification Service.. 
+	We can create a topic and add subscribers here. Send notifications to subscribers
+
+--> TOpic
+--> Push Notification
+--> SMS
+
+SES : Simple Email Service..
+--> Onbehalf of an Email / Domain, we can verify the email / domain.. 
+
+To Send bulk email, Use AWS Pinpoint service.. 
+
+Mailchimp
+EasySendyPro
+
+Pinpoint:
+--> Create a Segment (All email in a JSON/CSV)
+--> Create a Template (Messege/Email Body)
+--> Create a Campain
+
+SQS : Simple Queue Service.. 
+
+Free tier, 1 Million 
+--> To design a Decoupled application
+--> SQS also a Messeging service
+--> Max msg size 256 kb only.. 
+--> AWS COst us based on chunks.. 
+1 chunk = 64 kb.. 
+Message Retention Period:	4 days
+Default Visibility Timeout:	30 seconds
+
+Standard Queue: 
+FIFO Quoue : 
+
+
+Task : Migration Services: Migrate an AmazonLinux from Mumbai region to NV Region using Cloudendure.
+
+Task 2 : https://aws.amazon.com/getting-started/projects/deploy-drupal-with-amazon-rds/
+
+https://aws.amazon.com/getting-started/projects/deploy-wordpress-with-amazon-rds/
+
+https://avinash69.s3.ap-south-1.amazonaws.com/test3.pdf
+
+
+08:00 AM to 10:00 AM IST
 
 
 
